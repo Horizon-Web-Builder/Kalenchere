@@ -1,0 +1,270 @@
+/*Ce site à été écrit par Horizon Web Builder © 2025 Horizon Web Builder.*/
+
+html {
+    background-color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    padding: 2rem 6rem;
+    z-index: 10;
+}
+
+/*> 1000px*/
+
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 128px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+#logo:hover {
+    transform: scale(1.04);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    margin: 0 0.7rem;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s, border-bottom 0.3s;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: rgb(194, 150, 82);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(194, 150, 82);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#menu-toggle {
+    display: none;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 50px;
+    height: 50px;
+    transition: color 0.3s;
+}
+
+#menu-toggle:hover {
+    color: rgb(194, 150, 82);
+}
+
+#menu-toggle.active {
+    color: rgb(194, 150, 82);
+}
+
+.intro {
+    padding: 6rem;
+    margin: 0;
+    color: white;
+    background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 28));
+}
+
+.intro h1 {
+    font-size: 4.0625rem;
+    margin: 0;
+}
+
+.cta-button {
+    padding: 0.5rem 1.25rem;
+    background: linear-gradient(rgb(194, 150, 82), rgb(255, 197, 110));
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 7px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.04);
+}
+
+h2 {
+    font-size: 3.25rem;
+    color: rgb(23, 30, 64);
+}
+
+.services {
+    display: flex;
+    flex-direction: row;
+    background-color: #eeeeee;
+}
+
+#aservice {
+    border: 0.2rem solid rgb(184, 0, 0);
+    border-radius: 8px;
+}
+
+#imageservice {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: auto;
+}
+
+footer p a {
+    text-decoration: none;
+    color: rgb(23, 30, 64);
+    transition: color 0.5s;
+}
+
+footer p a:hover {
+    color: rgb(184, 0, 0);
+}
+
+
+
+
+
+
+
+/*>1000px, <750; MOYEN*/
+
+@media (max-width: 1000px) {
+    #logo {
+        width: 95px;
+    }
+    nav ul li a {
+        font-size: 0.875rem;
+    }
+    .intro h1 {
+        font-size: 2.8125rem;
+    }
+    .intro p {
+        font-size: 0.875rem;
+    }
+    .cta-button {
+        font-size: 0.875rem;
+    }
+    h2 {
+        font-size: 2.8125rem;
+    }
+    footer {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+/*>750px; PETIT*/
+
+@media (max-width: 750px) {
+    #menu-toggle {
+        display: flex;
+    }
+    #nav-links {
+        margin-top: 1rem;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.95);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 0;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: 
+            max-height 0.5s ease-in-out, 
+            opacity 0.5s ease-in-out, 
+            transform 0.5s ease-in-out, 
+            visibility 0s linear 0.5s, 
+            padding 0.5s ease-in-out;
+    }
+    #nav-links.active {
+        max-height: 300px;
+        opacity: 1;
+        visibility: visible;
+        padding: 20px 0;
+        transform: scaleY(1);
+        transition: 
+            max-height 0.5s ease-in-out, 
+            opacity 0.5s ease-in-out, 
+            transform 0.5s ease-in-out, 
+            visibility 0s linear 0s, 
+            padding 0.5s ease-in-out;
+    }         
+    header {
+        padding: 01rem 2rem;
+        padding-bottom: 0;
+    }
+    #logo {
+        width: 82px;
+    }
+    nav ul li a {
+        font-size: 1.05rem;
+    }
+    .intro {
+        padding: 2rem;
+    }
+    .intro h1 {
+        font-size: 1.75rem;
+    }
+    .intro p {
+        font-size: 0.875rem;
+    }
+    .cta-button {
+        font-size: 0.875rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    footer {
+        font-size: 0.875rem;
+    }
+}
