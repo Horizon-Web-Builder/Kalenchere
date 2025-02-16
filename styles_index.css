@@ -127,38 +127,14 @@ nav ul li a:hover::after {
     transform: scale(1.04);
 }
 
-h2 {
-    font-size: 3.25rem;
-    color: rgb(23, 30, 64);
-}
-
-.services {
-    display: flex;
-    flex-direction: row;
-    background-color: #eeeeee;
-}
-
-#aservice {
-    border: 0.2rem solid rgb(184, 0, 0);
-    border-radius: 8px;
-}
-
-#imageservice {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100px;
-    height: auto;
-}
-
 footer p a {
     text-decoration: none;
-    color: rgb(23, 30, 64);
+    color: rgb(0, 0, 0);
     transition: color 0.5s;
 }
 
 footer p a:hover {
-    color: rgb(184, 0, 0);
+    color: rgb(194, 150, 82);
 }
 
 
